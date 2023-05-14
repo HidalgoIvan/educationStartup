@@ -1,0 +1,50 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react-hooks/recommended",
+		"plugin:prettier/recommended"
+	],
+	"overrides": [],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint", "prettier"],
+	"rules": {
+		"prettier/prettier": [
+			"error",
+			{ "singleQuote": true, "endOfLine": "auto" }
+		],
+		"react/jsx-indent": [0],
+		"react/jsx-indent-props": [0],
+		"react/jsx-wrap-multilines": [
+			"error",
+			{
+				"declaration": true,
+				"assignment": true,
+				"return": true,
+				"arrow": true
+			}
+		],
+		"react/jsx-closing-bracket-location": ["error", "line-aligned"],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"linebreak-style": ["error", "unix"],
+		"quotes": ["error", "single"],
+		"semi": ["error", "always"],
+		"no-multiple-empty-lines": ["error", { "max": 1 }],
+		"@typescript-eslint/no-empty-interface": 0,
+		"max-len": ["error", { "code": 80, "ignorePattern": "^import\\s.+\\sfrom\\s.+;$" }]
+	}
+}
