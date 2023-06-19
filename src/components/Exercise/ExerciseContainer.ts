@@ -8,6 +8,7 @@ const ExerciseContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: var(--primary);
+  color: white;
 `;
 
 export { ExerciseContainer };

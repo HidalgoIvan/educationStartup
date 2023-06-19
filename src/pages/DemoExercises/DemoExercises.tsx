@@ -39,7 +39,7 @@ const DemoExercises: React.FC = () => {
   };
 
   return (
-    <IonPage>
+    <IonPage style={{ color: 'white' }}>
       <IonHeader>
         <SessionNavbar
           currentStreak={currentStreak}

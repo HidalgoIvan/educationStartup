@@ -26,13 +26,7 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/">
-          <DemoExercises />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+    <DemoExercises />
   </IonApp>
 );
 export default App;
