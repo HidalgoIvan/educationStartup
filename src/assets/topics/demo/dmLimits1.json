@@ -1,0 +1,79 @@
+{
+  "id": "dmLimits1",
+  "type": "RandomPool",
+  "title": "Límites",
+  "content": [
+    {
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén el valor de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = 5x^{2} -3x + 6"
+        },
+        {
+          "type": "Paragraph",
+          "text": "Evaluada en:"
+        },
+        {
+          "type": "Formula",
+          "formula": "x = 2"
+        }
+      ],
+      "options": [
+        {
+          "value": 18
+        },
+        {
+          "value": -14
+        },
+        {
+          "value": -7
+        },
+        {
+          "value": 20,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén el valor de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = x^2 -7x + 1 "
+        },
+        {
+          "type": "Paragraph",
+          "text": "Evaluada en:"
+        },
+        {
+          "type": "Formula",
+          "formula": "x = -3"
+        }
+      ],
+      "options": [
+        {
+          "value": 13
+        },
+        {
+          "value": 31,
+          "correct": true
+        },
+        {
+          "value": -9
+        },
+        {
+          "value": -24
+        }
+      ]
+    }
+  ]
+}

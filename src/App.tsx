@@ -1,4 +1,3 @@
-import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
@@ -20,13 +19,24 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import DemoExercises from './pages/DemoExercises/DemoExercises';
+import { Route } from 'react-router';
+import TopicList from './pages/TopicListPage/TopicListPage';
+import TopicPage from './pages/TopicPage/TopicPage';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <DemoExercises />
+    <IonReactRouter>
+      <IonRouterOutlet>
+        <Route path="/educationStartup/topic/:topicId">
+          <TopicPage />
+        </Route>
+        <Route exact path="/educationStartup/">
+          <TopicList />
+        </Route>
+      </IonRouterOutlet>
+    </IonReactRouter>
   </IonApp>
 );
 export default App;
