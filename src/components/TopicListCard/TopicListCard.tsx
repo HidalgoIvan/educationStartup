@@ -21,7 +21,6 @@ const TopicListCard: FunctionComponent<TopicCardProps> = ({
 }) => {
   const [progress, setProgress] = useState(0);
   statsLoader.loadTopicStats(id).then((stats: TopicStats) => {
-    console.log(stats);
     setProgress(Math.floor(stats.progressPercentage * 100));
   });
 
@@ -67,6 +66,7 @@ const CardInfo = styled.div`
   flex-direction: column;
   height: 100%;
   flex: 3;
+  padding-left: 12px;
 `;
 
 const CardTitle = styled.div`

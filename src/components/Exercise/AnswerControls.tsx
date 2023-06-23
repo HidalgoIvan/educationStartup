@@ -1,10 +1,10 @@
 import { FunctionComponent } from 'react';
 import { styled } from 'styled-components';
-import { ExerciseOption } from '../../types/ExerciseTypes/ExerciseTypes';
+import { ExerciseOption } from '../../types/exercises/ExerciseOption';
 
 interface AnswerControlsProps {
   options: ExerciseOption[];
-  onAnswerClick: (option: ExerciseOption) => any;
+  onAnswerClick: (option: ExerciseOption) => void;
 }
 
 const AnswerControls: FunctionComponent<AnswerControlsProps> = ({

@@ -1,6 +1,5 @@
 import type { FunctionComponent } from 'react';
 import { styled } from 'styled-components';
-import ProgressBar from '../../Progressbar/Progressbar';
 import StreakCounter from '../NavbarControls/StreakCounter/StreakCounter';
 import CoinCounter from '../NavbarControls/CoinCounter/CoinCounter';
 
@@ -12,7 +11,6 @@ interface SessionNavbarProps {
 }
 
 const SessionNavbar: FunctionComponent<SessionNavbarProps> = ({
-  currentStep,
   totalSteps,
   currentStreak,
   totalCoins,
@@ -20,7 +18,6 @@ const SessionNavbar: FunctionComponent<SessionNavbarProps> = ({
   return (
     <NavbarContainer>
       <StreakCounter currentStreak={currentStreak} maxStreak={totalSteps} />
-      <ProgressBar totalSteps={totalSteps} progress={currentStep}></ProgressBar>
       <CoinCounter totalCoins={totalCoins} />
     </NavbarContainer>
   );
