@@ -1,6 +1,8 @@
-import { FunctionComponent } from 'react';
+import { FunctionComponent, useState } from 'react';
 import { styled } from 'styled-components';
 import { IonItem } from '@ionic/react';
+import { LSTopicStatsLoader } from '../../controller/topicStats/LSTopicStatsLoader';
+import { TopicStats } from '../../model/topic/stats/TopicStats';
 
 interface TopicCardProps {
   title: string;
@@ -9,12 +11,20 @@ interface TopicCardProps {
   id: string;
 }
 
+const statsLoader = new LSTopicStatsLoader();
+
 const TopicListCard: FunctionComponent<TopicCardProps> = ({
   title,
   description,
   icon,
   id,
 }) => {
+  const [progress, setProgress] = useState(0);
+  statsLoader.loadTopicStats(id).then((stats: TopicStats) => {
+    console.log(stats);
+    setProgress(Math.floor(stats.progressPercentage * 100));
+  });
+
   return (
     <Card>
       <CardIcon>{icon}</CardIcon>
@@ -22,7 +32,7 @@ const TopicListCard: FunctionComponent<TopicCardProps> = ({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         <CardControls>
-          <TopicProgress>0%</TopicProgress>
+          <TopicProgress>{progress}%</TopicProgress>
           <IonItem routerLink={`/educationStartup/topic/${id}`} style={{}}>
             <OpenTopicButton>Ir</OpenTopicButton>
           </IonItem>

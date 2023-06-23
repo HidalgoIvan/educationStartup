@@ -1,44 +1,47 @@
 import { FunctionComponent } from 'react';
-import { css, styled } from 'styled-components';
+import { styled } from 'styled-components';
 import './styles.css';
+import { TopicStats } from '../../model/topic/stats/TopicStats';
 
 interface ProgressBarProps {
-  totalSteps: number;
-  progress: number;
+  progressPercentage: number;
 }
 
 const ProgressBar: FunctionComponent<ProgressBarProps> = ({
-  totalSteps,
-  progress,
+  progressPercentage = 0,
 }) => {
   return (
-    <ProgressBarContainer className="progressBarContainer">
-      <ProgressChunk sections={totalSteps} progress={progress}></ProgressChunk>
+    <ProgressBarContainer>
+      <ProgressChunk progressPercentage={progressPercentage} />
     </ProgressBarContainer>
   );
 };
 
 const ProgressBarContainer = styled.div`
-  width: 100%;
-  background-color: white;
+  width: calc(100% - 15px);
+  background-color: var(--content-100);
   height: 30px;
   border-radius: 100px;
   border: 3px solid white;
   display: flex;
   overflow: hidden;
 `;
-
-interface ProgressChunkProps {
-  sections: number;
-  progress: number;
+interface ProgressChunkBarProps {
+  progressPercentage: number;
 }
-const ProgressChunk = styled.div<ProgressChunkProps>`
+
+const ProgressChunk: FunctionComponent<ProgressChunkBarProps> = ({
+  progressPercentage,
+}) => {
+  return (
+    <ProgressChunkBar style={{ width: `calc(100% * ${progressPercentage})` }} />
+  );
+};
+
+const ProgressChunkBar = styled.div`
   height: 100%;
   background: green;
-  ${(props) => css`
-    width: calc(100% * ${props.progress / props.sections});
-  `}
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 `;
 
 export default ProgressBar;

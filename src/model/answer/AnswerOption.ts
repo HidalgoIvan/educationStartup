@@ -1,8 +1,11 @@
 export class AnswerOption {
   value: string | number;
   correct: boolean;
-  constructor(value: string | number, correct = false) {
+  formula?: string;
+
+  constructor(value: string | number, correct = false, formula?: string) {
     this.value = value;
     this.correct = correct;
+    this.formula = formula;
   }
 }

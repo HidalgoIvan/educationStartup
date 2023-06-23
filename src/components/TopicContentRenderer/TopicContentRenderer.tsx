@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
-import RandomPool from '../RandomPool/RandomPool';
 import { Topic, TopicTypes } from '../../model/topic/Topic';
 import NotFound from '../NotFound/NotFound';
+import RandomPoolStateManager from '../RandomPool/RandomPoolStateManager';
 
 interface TopicContentRendererProps {
   topic: Topic;
@@ -13,7 +13,7 @@ const TopicContentRenderer: FunctionComponent<TopicContentRendererProps> = ({
   let content = <></>;
   switch (topic.type) {
     case TopicTypes.RandomPool:
-      content = <RandomPool topic={topic} />;
+      content = <RandomPoolStateManager topic={topic} />;
       break;
     default:
       content = <NotFound />;

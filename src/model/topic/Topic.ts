@@ -1,4 +1,5 @@
 import { TopicContent } from './content/TopicContent';
+import { TopicStats } from './stats/TopicStats';
 
 export enum TopicTypes {
   RandomPool,

@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactElement } from 'react';
+import { FunctionComponent, ReactElement, useState } from 'react';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
 import Formula from '../Formula/Formula';
@@ -10,51 +10,85 @@ import { FormulaSection } from '../../model/topic/section/FormulaSection';
 import { ParagraphSection } from '../../model/topic/section/ParagraphSection';
 import { MultipleOptionContent } from '../../model/topic/content/MultipleOptionContent';
 import { AnswerOption } from '../../model/answer/AnswerOption';
+import Paragraph from '../Paragraph/Paragraph';
+import ContentBox from '../ContentBox/ContentBox';
 
 interface MultipleChoiceExerciseProps {
   multipleOptionContent: MultipleOptionContent;
+  onCorrectAnswer: () => void;
+  onWrongAnswer: () => void;
+  onContinue: () => void;
 }
 
 const MultipleChoiceExercise: FunctionComponent<
   MultipleChoiceExerciseProps
-> = ({ multipleOptionContent }) => {
-  const content = multipleOptionContent.sections.map((section) =>
-    renderSection(section)
-  );
+> = ({ multipleOptionContent, onCorrectAnswer, onWrongAnswer, onContinue }) => {
+  const [selectedAnswer, setSelectedAnswer] = useState<string | number>('');
+  const handleAnswer = (option: AnswerOption) => {
+    if (selectedAnswer) {
+      return;
+    }
+    option.correct ? onCorrectAnswer() : onWrongAnswer();
+    setSelectedAnswer(option.value);
+  };
+
+  const getOptionButton = (option: AnswerOption): ReactElement => {
+    const content = option.formula ? (
+      <Formula formula={option.formula} />
+    ) : (
+      option.value
+    );
+    return (
+      <OptionButton
+        key={nanoid()}
+        style={{ background: option.correct ? 'blue' : 'orange' }}
+        state={
+          selectedAnswer === option.value
+            ? option.correct
+              ? OptionButtonState.Correct
+              : OptionButtonState.Wrong
+            : OptionButtonState.NotSelected
+        }
+        onClick={() => handleAnswer(option)}
+      >
+        {content}
+      </OptionButton>
+    );
+  };
+
+  const getOptionRows = (options: AnswerOption[]): ReactElement[] => {
+    const rows: ReactElement[] = [];
+    for (let x = 0; x < options.length; x++) {
+      rows.push(getOptionButton(options[x]));
+    }
+    return rows;
+  };
   return (
     <>
-      {content}
+      {multipleOptionContent.sections.map((section) => renderSection(section))}
       <OptionContainer>
         {getOptionRows(multipleOptionContent.options)}
       </OptionContainer>
-      <ContinueButton>Continuar</ContinueButton>
+      <ContinueButton
+        disabled={!selectedAnswer}
+        style={{ opacity: selectedAnswer ? 1 : 0 }}
+        onClick={() => {
+          setSelectedAnswer('');
+          onContinue();
+        }}
+      >
+        Continuar
+      </ContinueButton>
     </>
   );
 };
-
-const getOptionRows = (options: AnswerOption[]): ReactElement[] => {
-  shuffleArray(options);
-  const rows: ReactElement[] = [];
-  for (let x = 0; x < options.length; x += 2) {
-    rows.push(
-      <OptionRow key={nanoid()}>
-        <OptionButton>{options[x].value}</OptionButton>
-        {x + 1 < options.length && (
-          <OptionButton>{options[x + 1].value}</OptionButton>
-        )}
-      </OptionRow>
-    );
-  }
-  return rows;
-};
-
 const renderSection = (section: TopicSection) => {
   switch (section.type) {
     case TopicSectionTypes.Formula:
       return (
-        <FormulaContainer key={nanoid()}>
+        <ContentBox key={nanoid()}>
           <Formula formula={(section as FormulaSection).formula} />
-        </FormulaContainer>
+        </ContentBox>
       );
     case TopicSectionTypes.Paragraph:
       return (
@@ -74,52 +108,40 @@ function shuffleArray(array: Array<any>) {
   }
 }
 
-const Paragraph = styled.div`
-  color: var(--content-200);
-  font-size: 1.2em;
-`;
-
-const FormulaContainer = styled.div`
-  color: var(--main-300);
-  background-color: var(--content-100);
-  padding: 2% 5%;
-  border-radius: 10px;
-  font-size: 1.4em;
-  font-weight: bold;
-`;
-
 const OptionContainer = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
-  height: max-content;
-  width: -webkit-fill-available;
-  @media (min-width: 900px) {
-    flex-direction: row;
-  }
-`;
-
-const OptionRow = styled.div`
-  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: auto;
   width: 100%;
-  margin-bottom: 25px;
-  justify-content: space-evenly;
 `;
+enum OptionButtonState {
+  NotSelected,
+  Correct,
+  Wrong,
+}
 
-const OptionButton = styled.button`
+interface OptionButtonProps {
+  state: OptionButtonState;
+}
+
+const OptionButton = styled.button<OptionButtonProps>`
   height: 7vh;
-  width: 27vw;
+  min-width: 24vw;
+  flex: auto;
   color: white;
-  background-color: var(--highlight);
+  font-size: 1.5em;
+  background-color: ${(props) =>
+    props.state === OptionButtonState.NotSelected
+      ? 'var(--highlight)'
+      : props.state === OptionButtonState.Correct
+      ? 'green'
+      : 'red'};
   padding: 0 5%;
-  font-size: 2em;
   font-weight: bold;
   border-radius: 15px;
-  @media (min-width: 900px) {
-    width: 20vw;
-    min-width: 20vw;
-    height: 10vh;
-  }
+  margin: 12px 5vw;
 `;
 
 const ContinueButton = styled.button`

@@ -6,6 +6,7 @@ export type JSONTopic = {
 };
 
 export type JSONTopicContent = {
+  id: string;
   type: string;
   sections: {
     type: string;
@@ -17,5 +18,6 @@ export type JSONTopicContent = {
 
 export type JSONTopicOption = {
   value: string | number;
+  formula?: string;
   correct?: boolean;
 };

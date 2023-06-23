@@ -11,23 +11,9 @@ http://ionicframework.com/docs/theming/ */
 	font-size: 1.5em;
 }
 
-.answerControlContainer button:nth-child(n) {
-	background-color: #2196f3;
-	filter: drop-shadow(-3px 3px 0 #093170);
-}
-.answerControlContainer button:nth-child(2n) {
-	background-color: #ff9800;
-	filter: drop-shadow(-3px 3px 0 #b24d00);
-}
-
 .answerControlContainer button:nth-child(3n) {
 	background-color: #ff5722;
 	filter: drop-shadow(-3px 3px 0 #852508);
-}
-
-.answerControlContainer button:nth-child(4n) {
-	background-color: #4caf50;
-	filter: drop-shadow(-3px 3px 0 #124116);
 }
 
 .item-native {

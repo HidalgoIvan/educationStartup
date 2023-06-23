@@ -1,5 +1,5 @@
-import { FunctionComponent, useEffect, useRef } from 'react';
-import { MathField, StaticMathField, addStyles } from 'react-mathquill';
+import { FunctionComponent } from 'react';
+import { StaticMathField, addStyles } from 'react-mathquill';
 
 interface FormulaProps {
   formula: string;

@@ -38,6 +38,7 @@ export class JSONTopicLoader implements TopicLoader {
         case TopicContentTypes.MultipleOption:
           topicContents.push(
             new MultipleOptionContent(
+              content.id,
               contentType,
               this._loadContentSections(content),
               this._loadContentOptions(content.options ?? [])
@@ -80,7 +81,13 @@ export class JSONTopicLoader implements TopicLoader {
   private _loadContentOptions(json: JSONTopicOption[]): AnswerOption[] {
     const options: AnswerOption[] = [];
     json.forEach((jsonOption) => {
-      options.push(new AnswerOption(jsonOption.value, jsonOption.correct));
+      options.push(
+        new AnswerOption(
+          jsonOption.value,
+          jsonOption.correct,
+          jsonOption.formula
+        )
+      );
     });
     return options;
   }
