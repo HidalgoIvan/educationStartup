@@ -99,7 +99,8 @@ interface OptionButtonProps {
 }
 
 const OptionButton = styled.button<OptionButtonProps>`
-  height: 7vh;
+  overflow-x: auto;
+  min-height: 7vh;
   min-width: 34vw;
   color: white;
   font-size: 1.5em;
@@ -109,7 +110,7 @@ const OptionButton = styled.button<OptionButtonProps>`
       : props.state === OptionButtonState.Correct
       ? 'green'
       : 'red'};
-  padding: 0 5%;
+  padding: 8px 5%;
   font-weight: bold;
   border-radius: 15px;
   margin: 12px 5vw;

@@ -1,9 +1,15 @@
 [
 	{
-    "title": "Examen diagnóstico",
-    "id": "dmExam1",
-    "description": "Un examen diagnóstico con tips para poner a prueba tu conocimiento.",
-    "icon": "exam"
+    "title": "La derivada I",
+    "id": "dmDerivatives1",
+    "description": "Derivadas de funciones polinómicas, algebraicas, trascendentes y derivadas de orden superior.",
+    "icon": "parabole"
+  },
+	{
+    "title": "La derivada II",
+    "id": "dmDerivatives2",
+    "description": "Máximos, mínimos y puntos de inflexión de una función, optimización, velocidad, aceleración y rapidez de un móvil, regla de L'Hôpital.",
+    "icon": "minimum"
   },
   {
     "title": "Límites I",

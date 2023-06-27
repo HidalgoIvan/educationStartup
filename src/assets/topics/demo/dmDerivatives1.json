@@ -1,0 +1,691 @@
+{
+  "id": "dmDerivatives1",
+  "type": "RandomPool",
+  "title": "La derivada I",
+  "content": [
+    {
+      "id": "1",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = -7x + 21"
+        }
+      ],
+      "options": [
+        {
+          "value": "f'(x) = 21",
+          "formula": "f'(x) = 21"
+        },
+        {
+          "value": "f'(x) = 7",
+          "formula": "f'(x) = 7"
+        },
+        {
+          "value": "f'(x) = -7",
+          "formula": "f'(x) = -7",
+          "correct": true
+        },
+        {
+          "value": "f'(x) = 3",
+          "formula": "f'(x) = 3"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = 3x^{2} +11x -8"
+        }
+      ],
+      "options": [
+        {
+          "value": "f'(x) = 3x+11",
+          "formula": "f'(x) = 3x+11"
+        },
+        {
+          "value": "f'(x) = 6x+11",
+          "formula": "f'(x) = 6x+11",
+          "correct": true
+        },
+        {
+          "value": "f'(x) = 6x-11",
+          "formula": "f'(x) = 6x-11"
+        },
+        {
+          "value": "f'(x) = 11x-8",
+          "formula": "f'(x) = 11x-8"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = 4x^{3} +5x -9"
+        }
+      ],
+      "options": [
+        {
+          "value": "f'(x) = 4x^{2}+5",
+          "formula": "f'(x) = 4x^{2}+5"
+        },
+        {
+          "value": "f'(x) = 12x^{2}+5",
+          "formula": "f'(x) = 12x^{2}+5",
+          "correct": true
+        },
+        {
+          "value": "f'(x) = 8x^{2}-9",
+          "formula": "f'(x) = 8x^{2}-9"
+        },
+        {
+          "value": "f'(x) = 12x^{2}+5x",
+          "formula": "f'(x) = 12x^{2}+5x"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = 6x^{4} -15x^{2} +8"
+        }
+      ],
+      "options": [
+        {
+          "value": "f'(x) = 24x^{3}-30x",
+          "formula": "f'(x) = 24x^{3}-30x",
+          "correct": true
+        },
+        {
+          "value": "f'(x) = 18x^{3}-30x^{2}",
+          "formula": "f'(x) = 18x^{3}-30x^{2}"
+        },
+        {
+          "value": "f'(x) = 24x^{3}+30x",
+          "formula": "f'(x) = 24x^{3}+30x"
+        },
+        {
+          "value": "f'(x) = 24x^{3}-30x+8",
+          "formula": "f'(x) = 24x^{3}-30x+8"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la función:"
+        },
+        {
+          "type": "Formula",
+          "formula": "f(x) = x^{5}-10x^{3}-5x^{2}-8"
+        }
+      ],
+      "options": [
+        {
+          "value": "f'(x) = x^{4} - 30x^{2} - 10x",
+          "formula": "f'(x) = x^{4} - 30x^{2} - 10x"
+        },
+        {
+          "value": "f'(x) = 4x^{4} - 30x^{2} - 10x",
+          "formula": "f'(x) = 4x^{4} - 30x^{2} - 10x"
+        },
+        {
+          "value": "f'(x) = 5x^{4} - 10x^{2} - 10x",
+          "formula": "f'(x) = 5x^{4} - 10x^{2} - 10x"
+        },
+        {
+          "value": "f'(x) = 5x^{4} - 30x^{2} - 10x",
+          "formula": "f'(x) = 5x^{4} - 30x^{2} - 10x",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la expresión:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = 3x^{5} - 17x"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = 3x^{4} - 17",
+          "formula": "y' = 3x^{4} - 17"
+        },
+        {
+          "value": "y' = 3x^{4} - 17x",
+          "formula": "y' = 3x^{4} - 17x"
+        },
+        {
+          "value": "y' = 15x^{4}",
+          "formula": "y' = 15x^{4}"
+        },
+        {
+          "value": "y' = 15x^{4} - 17",
+          "formula": "y' = 15x^{4} - 17",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la expresión:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = 23"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = 23",
+          "formula": "y' = 23"
+        },
+        {
+          "value": "y' = -23",
+          "formula": "y' = -23"
+        },
+        {
+          "value": "y' = 0",
+          "formula": "y' = 0",
+          "correct": true
+        },
+        {
+          "value": "y' = 2",
+          "formula": "y' = 2"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la expresión:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y=\\frac{2x^3+13x^2-3x+4}{x}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y'=\\frac{4x^3 + 13x^2 - 4}{x^2}",
+          "formula": "y'=\\frac{4x^3 + 13x^2 - 4}{x^2}",
+          "correct": true
+        },
+        {
+          "value": "y'=\\frac{4x^3 + 13x^2 - 4}{x}",
+          "formula": "y'=\\frac{4x^3 + 13x^2 - 4}{x}"
+        },
+        {
+          "value": "y'=\\frac{4x^3 - 13x^2 + 4}{x^2}",
+          "formula": "y'=\\frac{4x^3 - 13x^2 + 4}{x^2}"
+        },
+        {
+          "value": "y'=\\frac{4x^3 + 13x^2 - 4}{x^2}",
+          "formula": "y'=\\frac{4x^3 + 13x^2 - 4}{x^2}"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la expresión:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y= 7x^{4} + \\sqrt{x}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y = 7x^{3} + \\frac{1}{2\\sqrt{x}}",
+          "formula": "y = 7x^{3} + \\frac{1}{2\\sqrt{x}}"
+        },
+        {
+          "value": "y = 28x^{3} + \\frac{1}{2\\sqrt{x}}",
+          "formula": "y = 28x^{3} + \\frac{1}{2\\sqrt{x}}",
+          "correct": true
+        },
+        {
+          "value": "y = 28x^{3} - \\frac{1}{2\\sqrt{x}}",
+          "formula": "y = 28x^{3} - \\frac{1}{2\\sqrt{x}}"
+        },
+        {
+          "value": "y = 28x^{3} + \\frac{1}{\\sqrt{x}}",
+          "formula": "y = 28x^{3} + \\frac{1}{\\sqrt{x}}"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Obtén la derivada de la expresión:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = (3x + 4)(2x^3 -1)"
+        }
+      ],
+      "options": [
+        {
+          "value": "y = 24x^3 + 18x^2 - 3",
+          "formula": "y = 24x^3 + 18x^2 - 3"
+        },
+        {
+          "value": "y = 25x^3 + 24x^2 - 3",
+          "formula": "y = 25x^3 + 24x^2 - 3"
+        },
+        {
+          "value": "y = 24x^3 + 24x^2 - 3",
+          "formula": "y = 24x^3 + 24x^2 - 3",
+          "correct": true
+        },
+        {
+          "value": "y = 24x^3 + 24x^2",
+          "formula": "y = 24x^3 + 24x^2"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = \\frac{sen(x)}{x}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y = \\frac{x cos(x) - sen(x)}{x^2}",
+          "formula": "y = \\frac{x cos(x) - sen(x)}{x^2}",
+          "correct": true
+        },
+        {
+          "value": "y = \\frac{x sen(x) - sen(x)}{x^2}",
+          "formula": "y = \\frac{x sen(x) - sen(x)}{x^2}"
+        },
+        {
+          "value": "y = \\frac{x sen(x) - cos(x)}{x^2}",
+          "formula": "y = \\frac{x sen(x) - cos(x)}{x^2}"
+        },
+        {
+          "value": "y = \\frac{x cos(x) + sen(x)}{x^2}",
+          "formula": "y = \\frac{x cos(x) + sen(x)}{x^2}"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = -7 sen(\\frac{1}{x})"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = \\frac{1}{x^2} cos(\\frac{1}{x})",
+          "formula": "y' = \\frac{1}{x^2} cos(\\frac{1}{x})"
+        },
+        {
+          "value": "y' = \\frac{7}{x^2} cos(\\frac{1}{x})",
+          "formula": "y' = \\frac{7}{x^2} cos(\\frac{1}{x})",
+          "correct": true
+        },
+        {
+          "value": "y' = \\frac{7}{x^2} sen(\\frac{1}{x})",
+          "formula": "y' = \\frac{7}{x^2} sen(\\frac{1}{x})"
+        },
+        {
+          "value": "y' = \\frac{7}{x} sen(\\frac{1}{x})",
+          "formula": "y' = \\frac{7}{x} sen(\\frac{1}{x})"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = \\frac{x}{cos(x)}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = \\frac{cos(x) + x sen(x)}{cos(x)}",
+          "formula": "y' = \\frac{cos(x) + x sen(x)}{cos(x)}"
+        },
+        {
+          "value": "y' = \\frac{sen(x) + x sen(x)}{cos^2(x)}",
+          "formula": "y' = \\frac{sen(x) + x sen(x)}{cos^2(x)}"
+        },
+        {
+          "value": "y' = \\frac{sen(x) + cos(x)}{cos^2(x)}",
+          "formula": "y' = \\frac{sen(x) + cos(x)}{cos^2(x)}"
+        },
+        {
+          "value": "y' = \\frac{cos(x) + x sen(x)}{cos^2(x)}",
+          "formula": "y' = \\frac{cos(x) + x sen(x)}{cos^2(x)}",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = cos(4x)"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = -4 sen(4x)",
+          "formula": "y' = -4 sen(4x)",
+          "correct": true
+        },
+        {
+          "value": "y' = 4 sen(4x)",
+          "formula": "y' = 4 sen(4x)"
+        },
+        {
+          "value": "y' = -4 sen(x)",
+          "formula": "y' = -4 sen(x)"
+        },
+        {
+          "value": "y' = -4 cos(4x)",
+          "formula": "y' = -4 cos(4x)"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = tan(x) = \\frac{sen(x)}{cos(x)}"
+        },
+        {
+          "type": "Paragraph",
+          "text": "Con la fórmula de la derivada de una división y tomando en cuenta lo siguiente:"
+        },
+        {
+          "type": "Formula",
+          "formula": "cos^2(x) + sen^2(x) = 1"
+        },
+        {
+          "type": "Formula",
+          "formula": "\\frac{1}{cos^2(x)} = sec^2(x)"
+        }
+      ],
+      "options": [
+        {
+          "value": "y' = sec^2(x) cos^2(x)",
+          "formula": "y' = sec^2(x) cos^2(x)"
+        },
+        {
+          "value": "y' = sec^2(x)",
+          "formula": "y' = sec^2(x)",
+          "correct": true
+        },
+        {
+          "value": "y' = sec(x)",
+          "formula": "y' = sec(x)"
+        },
+        {
+          "value": "y' = -sec^2(x)",
+          "formula": "y' = -sec^2(x)"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la segunda derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = 5x^4 - 9x^3 + 2x"
+        },
+        {
+          "type": "Paragraph",
+          "text": "Con la fórmula de la derivada de una división y tomando en cuenta lo siguiente:"
+        },
+        {
+          "type": "Formula",
+          "formula": "cos^2(x) + sen^2(x) = 1"
+        },
+        {
+          "type": "Formula",
+          "formula": "\\frac{1}{cos^2(x)} = sec^2(x)"
+        }
+      ],
+      "options": [
+        {
+          "value": "y'' = 20x^3 -27x^2 -2",
+          "formula": "y'' = 20x^3 -27x^2 -2"
+        },
+        {
+          "value": "y'' = 60x^3 +54x^2 +2",
+          "formula": "y'' = 60x^3 +54x^2 +2"
+        },
+        {
+          "value": "y'' = x^3 - 27x^2 +2",
+          "formula": "y'' = x^3 - 27x^2 +2"
+        },
+        {
+          "value": "y'' = 60x^2 - 54x",
+          "formula": "y'' = 60x^2 - 54x",
+          "correct": true
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la tercera derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = cos(17x)"
+        }
+      ],
+      "options": [
+        {
+          "value": "y''' = 17cos(17x)",
+          "formula": "y''' = 17cos(17x)"
+        },
+        {
+          "value": "y''' = -4913sen(17x)",
+          "formula": "y''' = -4913sen(17x)"
+        },
+        {
+          "value": "y''' = 4913sen(17x)",
+          "formula": "y''' = 4913sen(17x)",
+          "correct": true
+        },
+        {
+          "value": "y''' = 17sen(17x)",
+          "formula": "y''' = 17sen(17x)"
+        }
+      ]
+    },
+		{
+      "id": "18",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la segunda derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = \\sqrt{-12x + 1}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y'' = -\\frac{36}{(-12x + 1)^\\frac{3}{2}}",
+          "formula": "y'' = -\\frac{36}{(-12x + 1)^\\frac{3}{2}}",
+          "correct": true
+        },
+        {
+          "value": "y'' = \\frac{3}{(-12x + 1)^\\frac{3}{2}}",
+          "formula": "y'' = \\frac{3}{(-12x + 1)^\\frac{3}{2}}"
+        },
+        {
+          "value": "y'' = -\\frac{3}{(-12x + 1)^\\frac{1}{2}}",
+          "formula": "y'' = -\\frac{3}{(-12x + 1)^\\frac{1}{2}}"
+        },
+        {
+					"value": "y'' = \\frac{3}{(-12x + 1)^\\frac{1}{2}}",
+          "formula": "y'' = \\frac{3}{(-12x + 1)^\\frac{1}{2}}"
+        }
+      ]
+    },
+		{
+      "id": "19",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la segunda derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = ln[sen(-3x)]"
+        }
+      ],
+      "options": [
+        {
+          "value": "y'' = \\frac{-9}{sin^2 (-3x)}",
+          "formula": "y'' = \\frac{-9}{sin^2 (-3x)}",
+          "correct": true
+        },
+        {
+          "value": "y'' = \\frac{-9}{cos^2 (-3x)}",
+          "formula": "y'' = \\frac{-9}{cos^2 (-3x)}"
+        },
+        {
+          "value": "y'' = \\frac{1}{sin^2 (-3x)}",
+          "formula": "y'' = \\frac{1}{sin^2 (-3x)}"
+        },
+        {
+          "value": "y'' = \\frac{-9}{sin (-3x)}",
+          "formula": "y'' = \\frac{-9}{sin (-3x)}"
+        }
+      ]
+    },
+		{
+      "id": "20",
+      "type": "MultipleOption",
+      "sections": [
+        {
+          "type": "Paragraph",
+          "text": "Calcula la segunda derivada de:"
+        },
+        {
+          "type": "Formula",
+          "formula": "y = sen(11x) e^{6x-2}"
+        }
+      ],
+      "options": [
+        {
+          "value": "y'' = e^{6x-2}[132cos(11x) - 85sen(11x)]",
+          "formula": "y'' = e^{6x-2}[132cos(11x) - 85sen(11x)]",
+          "correct": true
+        },
+        {
+          "value": "y'' = e^{6x-2}[-132cos(11x) - 85sen(11x)]",
+          "formula": "y'' = e^{6x-2}[-132cos(11x) - 85sen(11x)]"
+        },
+        {
+          "value": "y'' = e^{6x-2}[132cos(11x) + 85sen(11x)]",
+          "formula": "y'' = e^{6x-2}[132cos(11x) + 85sen(11x)]"
+        },
+        {
+          "value": "y'' = e^{6x-2}[85cos(11x) - 132sen(11x)]",
+          "formula": "y'' = e^{6x-2}[85cos(11x) - 132sen(11x)]"
+        }
+      ]
+    }
+  ]
+}

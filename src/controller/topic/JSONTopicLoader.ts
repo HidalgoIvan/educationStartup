@@ -2,6 +2,9 @@ import { Topic, TopicTypes } from '../../model/topic/Topic';
 import { TopicLoader } from './TopicLoader';
 import dmLimits1 from '../../assets/topics/demo/dmLimits1.json';
 import dmLimits2 from '../../assets/topics/demo/dmLimits2.json';
+import dmDerivatives1 from '../../assets/topics/demo/dmDerivatives1.json';
+import dmDerivatives2 from '../../assets/topics/demo/dmDerivatives2.json';
+
 import dmExam1 from '../../assets/topics/demo/dmExam1.json';
 
 import {
@@ -28,6 +31,8 @@ const topicJSONs: { [key: string]: JSONTopic } = {
   dmLimits1: dmLimits1,
   dmLimits2: dmLimits2,
   dmExam1: dmExam1,
+  dmDerivatives1: dmDerivatives1,
+  dmDerivatives2: dmDerivatives2,
 };
 
 export class JSONTopicLoader implements TopicLoader {

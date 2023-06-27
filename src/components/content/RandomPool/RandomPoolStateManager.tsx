@@ -50,7 +50,7 @@ const RandomPoolStateManager: FunctionComponent<
     setContent(stateController?.getNextContent());
   };
 
-  if (!stateController || !content) {
+  if (!stateController) {
     return <>Cargando...</>;
   }
 

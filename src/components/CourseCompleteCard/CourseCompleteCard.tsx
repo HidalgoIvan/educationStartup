@@ -16,16 +16,28 @@ const CourseCompleteCard: FunctionComponent<CourseCompleteCardProps> = ({
 }) => {
   return (
     <TopicContentCard>
-      <ProgressBar progressPercentage={1} />
-      <Paragraph>¡Felicidades!</Paragraph>
-      <ContentBox>{title}</ContentBox>
-      <Paragraph>Has completado este curso</Paragraph>
-      <Link to={'/'}>
-        <ReturnButton>Regresar</ReturnButton>
-      </Link>
+      <ContentWrapper>
+        <ProgressBar progressPercentage={1} />
+        <Paragraph>¡Felicidades!</Paragraph>
+        <ContentBox>{title}</ContentBox>
+        <Paragraph>Has completado este curso</Paragraph>
+        <Link to={'/'}>
+          <ReturnButton>Regresar</ReturnButton>
+        </Link>
+      </ContentWrapper>
     </TopicContentCard>
   );
 };
+
+const ContentWrapper = styled.div`
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 4%;
+`;
 
 const ReturnButton = styled.button`
   background-color: var(--highlight);

@@ -47,7 +47,7 @@ const TutorialStateManager: FunctionComponent<TutorialProps> = ({ topic }) => {
     setContent(stateController?.getNextContent());
   };
 
-  if (!stateController || !content) {
+  if (!stateController) {
     return <>Cargando...</>;
   }
 
