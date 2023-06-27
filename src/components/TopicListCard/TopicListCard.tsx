@@ -1,13 +1,14 @@
 import { FunctionComponent, useState } from 'react';
 import { styled } from 'styled-components';
-import { IonItem } from '@ionic/react';
 import { LSTopicStatsLoader } from '../../controller/topicStats/LSTopicStatsLoader';
 import { TopicStats } from '../../model/topic/stats/TopicStats';
+import { Link } from 'react-router-dom';
+import Icon, { Icons } from '../contentElements/Icon/Icon';
 
 interface TopicCardProps {
   title: string;
   description: string;
-  icon: string;
+  icon: Icons;
   id: string;
 }
 
@@ -26,15 +27,17 @@ const TopicListCard: FunctionComponent<TopicCardProps> = ({
 
   return (
     <Card>
-      <CardIcon>{icon}</CardIcon>
+      <CardIcon>
+        <Icon icon={Icons[icon]} />
+      </CardIcon>
       <CardInfo>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
         <CardControls>
           <TopicProgress>{progress}%</TopicProgress>
-          <IonItem routerLink={`/educationStartup/topic/${id}`} style={{}}>
+          <Link to={`/topic/${id}`} style={{}}>
             <OpenTopicButton>Ir</OpenTopicButton>
-          </IonItem>
+          </Link>
         </CardControls>
       </CardInfo>
     </Card>
@@ -108,6 +111,8 @@ const OpenTopicButton = styled.div`
   align-items: center;
   font-weight: bold;
   border-radius: 10px;
+  color: white;
+  text-decoration: none;
 `;
 
 export default TopicListCard;

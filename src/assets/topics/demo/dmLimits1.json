@@ -297,17 +297,17 @@
       ],
       "options": [
         {
-          "value": 0
+          "value": "0"
         },
         {
-          "value": 1,
+          "value": "1",
 					"correct": true
         },
         {
-					"value": 0.5
+					"value": "0.5"
         },
         {
-          "value": 0.86
+          "value": "0.86"
         }
       ]
     },
@@ -317,11 +317,11 @@
       "sections": [
         {
           "type": "Paragraph",
-          "text": "Obtén el valor de la función:"
+          "text": "Obtén el valor de x en el cual la función:"
         },
         {
           "type": "Formula",
-          "formula": "f(x) = 5x + 10"
+          "formula": "f(x) = -5x + 10"
         },
 				{
           "type": "Paragraph",
@@ -330,17 +330,17 @@
       ],
       "options": [
         {
-          "value": 2,
+          "value": "2",
 					"correct": true
         },
         {
-          "value": 1
+          "value": "1"
         },
         {
-					"value": 5
+					"value": "5"
         },
         {
-          "value": 0
+          "value": "0"
         }
       ]
     }

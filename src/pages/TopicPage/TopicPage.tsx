@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import FullScreenPage from '../../layouts/FullScreenPage/FullScreenPage';
 import { useParams } from 'react-router';
-import TopicContentRenderer from '../../components/TopicContentRenderer/TopicContentRenderer';
+import TopicRenderer from '../../components/TopicRenderer/TopicRenderer';
 import { JSONTopicLoader } from '../../controller/topic/JSONTopicLoader';
 import { Topic } from '../../model/topic/Topic';
 
@@ -11,7 +11,7 @@ const topicLoader = new JSONTopicLoader();
 const TopicPage: FunctionComponent<TopicContentPageProps> = () => {
   const { topicId } = useParams<{ topicId: string }>();
   const topic: Topic = topicLoader.loadTopic(topicId);
-  return <FullScreenPage content={<TopicContentRenderer topic={topic} />} />;
+  return <FullScreenPage content={<TopicRenderer topic={topic} />} />;
 };
 
 export default TopicPage;

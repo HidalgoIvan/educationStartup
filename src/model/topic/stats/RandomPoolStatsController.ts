@@ -1,47 +1,25 @@
-import { MultipleOptionContent } from '../content/MultipleOptionContent';
-import { TopicContent, TopicContentTypes } from '../content/TopicContent';
+import { TopicStatsControllerBase } from '../../../controller/topicStatsController/TopicStatsControllerBase';
+import { TopicContent } from '../content/TopicContent';
 import { TopicStats } from './TopicStats';
 
-export interface RandomPoolStats extends TopicStats {
-  completedExerciseIds: string[];
-  totalExercises: number;
-}
+type RandomPoolStatsControllerProps = {
+  stats: TopicStats;
+  onStatsChanged: (stats: TopicStats) => void;
+};
 
-export class RandomPoolStatsController {
-  stats: RandomPoolStats;
-  onChange: (stats: RandomPoolStats) => void;
+export class RandomPoolStatsController extends TopicStatsControllerBase {
+  onStatsChanged: (stats: TopicStats) => void;
 
-  constructor(
-    stats: RandomPoolStats,
-    onChange: (stats: RandomPoolStats) => void
-  ) {
-    this.stats = stats;
-    this.onChange = onChange;
+  constructor(props: RandomPoolStatsControllerProps) {
+    super(props.stats);
+    this.onStatsChanged = props.onStatsChanged;
   }
 
-  addCompletedExercise(exerciseId: string) {
-    this.stats.completedExerciseIds.push(exerciseId);
+  addCompletedContent = (content: TopicContent) => {
+    this.stats.completedContentIds.push(content.id);
     this.stats.progressPercentage =
-      this.stats.completedExerciseIds.length / this.stats.totalExercises;
+      this.stats.completedContentIds.length / this.stats.contentCount;
     this.saveChanges();
-    this.onChange(this.stats);
-  }
-
-  pickRandomExercise(
-    exercises: MultipleOptionContent[]
-  ): MultipleOptionContent {
-    if (this.stats.completedExerciseIds.length >= exercises.length) {
-      return exercises[0];
-    }
-
-    this.stats.completedExerciseIds.forEach((exerciseId) => {
-      exercises = exercises.filter((exercise) => exercise.id != exerciseId);
-    });
-
-    return exercises[Math.floor(Math.random() * exercises.length)];
-  }
-
-  private saveChanges() {
-    localStorage.setItem(this.stats.topicId, JSON.stringify(this.stats));
-  }
+    this.onStatsChanged(this.stats);
+  };
 }

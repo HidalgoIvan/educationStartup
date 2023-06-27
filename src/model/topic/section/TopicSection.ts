@@ -1,6 +1,9 @@
 export enum TopicSectionTypes {
   Paragraph,
+  TextBox,
   Formula,
+  Plot,
+  Image,
 }
 
 export class TopicSection {

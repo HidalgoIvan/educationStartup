@@ -1,10 +1,11 @@
 import { FunctionComponent } from 'react';
 import { TopicContentCard } from '../TopicContentCard/TopicContentCard';
-import Paragraph from '../Paragraph/Paragraph';
-import ContentBox from '../ContentBox/ContentBox';
+import Paragraph from '../contentElements/Paragraph/Paragraph';
+import ContentBox from '../contentElements/ContentBox/ContentBox';
 import { styled } from 'styled-components';
 import { IonItem } from '@ionic/react';
 import ProgressBar from '../Progressbar/Progressbar';
+import { Link } from 'react-router-dom';
 
 interface CourseCompleteCardProps {
   title: string;
@@ -19,9 +20,9 @@ const CourseCompleteCard: FunctionComponent<CourseCompleteCardProps> = ({
       <Paragraph>¡Felicidades!</Paragraph>
       <ContentBox>{title}</ContentBox>
       <Paragraph>Has completado este curso</Paragraph>
-      <IonItem routerLink={'/educationStartup/'}>
+      <Link to={'/'}>
         <ReturnButton>Regresar</ReturnButton>
-      </IonItem>
+      </Link>
     </TopicContentCard>
   );
 };

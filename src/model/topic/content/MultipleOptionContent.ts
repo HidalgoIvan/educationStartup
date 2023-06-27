@@ -2,20 +2,21 @@ import { AnswerOption } from '../../answer/AnswerOption';
 import { TopicSection } from '../section/TopicSection';
 import { TopicContent, TopicContentTypes } from './TopicContent';
 
-export class MultipleOptionContent extends TopicContent {
+type MultipleOptionContentProps = {
   id: string;
   sections: TopicSection[];
   options: AnswerOption[];
+};
 
-  constructor(
-    id: string,
-    type: TopicContentTypes,
-    sections: TopicSection[],
-    options: AnswerOption[]
-  ) {
-    super(type);
-    this.id = id;
-    this.sections = sections;
-    this.options = options;
+export class MultipleOptionContent extends TopicContent {
+  options: AnswerOption[];
+
+  constructor(props: MultipleOptionContentProps) {
+    super({
+      id: props.id,
+      type: TopicContentTypes.MultipleOption,
+      sections: props.sections,
+    });
+    this.options = props.options;
   }
 }

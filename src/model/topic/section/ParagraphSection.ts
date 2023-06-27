@@ -2,8 +2,8 @@ import { TopicSection, TopicSectionTypes } from './TopicSection';
 
 export class ParagraphSection extends TopicSection {
   text: string;
-  constructor(type: TopicSectionTypes, text: string) {
-    super(type);
+  constructor(text: string) {
+    super(TopicSectionTypes.Paragraph);
     this.text = text;
   }
 }

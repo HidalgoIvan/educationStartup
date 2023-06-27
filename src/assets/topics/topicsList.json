@@ -1,0 +1,20 @@
+[
+	{
+    "title": "Examen diagnóstico",
+    "id": "dmExam1",
+    "description": "Un examen diagnóstico con tips para poner a prueba tu conocimiento.",
+    "icon": "exam"
+  },
+  {
+    "title": "Límites I",
+    "id": "dmLimits1",
+    "description": "Antecedentes y aplicaciones del cálculo.",
+    "icon": "graphLimit"
+  },
+	{
+    "title": "Límites II",
+    "id": "dmLimits2",
+    "description": "Concepto, propiedades y límites de funciones algebraicas y trascendentes",
+    "icon": "graphLimit"
+  }
+]

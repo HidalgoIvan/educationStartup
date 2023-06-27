@@ -1,9 +1,11 @@
 import { Topic, TopicTypes } from '../../model/topic/Topic';
-import { TopicStats } from '../../model/topic/stats/TopicStats';
+import {
+  TopicStats,
+  getEmptyTopicStats,
+} from '../../model/topic/stats/TopicStats';
 import { JSONTopicLoader } from '../topic/JSONTopicLoader';
 import { TopicLoader } from '../topic/TopicLoader';
 import { TopicStatsLoader } from './TopicStatsLoader';
-import { RandomPoolStats } from '../../model/topic/stats/RandomPoolStatsController';
 
 export class LSTopicStatsLoader implements TopicStatsLoader {
   private topicLoader: TopicLoader;
@@ -15,7 +17,7 @@ export class LSTopicStatsLoader implements TopicStatsLoader {
   loadTopicStats = async (topicId: string): Promise<TopicStats> => {
     const topic = this.topicLoader.loadTopic(topicId);
     const topicType: TopicTypes = topic.type;
-    let stats: TopicStats = { topicId: '', progressPercentage: 0 };
+    let stats: TopicStats = getEmptyTopicStats();
     switch (topicType) {
       case TopicTypes.RandomPool:
       default:
@@ -29,19 +31,25 @@ export class LSTopicStatsLoader implements TopicStatsLoader {
     return Promise.resolve([]);
   };
 
-  private loadRandomPoolStats(topic: Topic) {
+  private loadRandomPoolStats(topic: Topic): TopicStats {
     const storeKeys: string[] = Object.keys(localStorage);
-    let topicStats: RandomPoolStats;
+    let topicStats: TopicStats;
     if (storeKeys.includes(topic.id)) {
       topicStats = JSON.parse(localStorage.getItem(topic.id) ?? '');
     } else {
       topicStats = {
         topicId: topic.id,
-        completedExerciseIds: [],
+        completedContentIds: [],
         progressPercentage: 0,
-        totalExercises: topic.contents.length,
+        contentCount: topic.contents.length,
       };
     }
+    if (topicStats.contentCount != topic.contents.length) {
+      topicStats.contentCount = topic.contents.length;
+      topicStats.progressPercentage =
+        topicStats.completedContentIds.length / topicStats.contentCount;
+    }
+
     return topicStats;
   }
 }

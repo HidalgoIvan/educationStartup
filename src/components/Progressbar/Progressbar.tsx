@@ -1,7 +1,6 @@
 import { FunctionComponent } from 'react';
 import { styled } from 'styled-components';
 import './styles.css';
-import { TopicStats } from '../../model/topic/stats/TopicStats';
 
 interface ProgressBarProps {
   progressPercentage: number;

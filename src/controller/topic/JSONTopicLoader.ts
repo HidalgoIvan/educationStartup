@@ -1,6 +1,9 @@
 import { Topic, TopicTypes } from '../../model/topic/Topic';
 import { TopicLoader } from './TopicLoader';
 import dmLimits1 from '../../assets/topics/demo/dmLimits1.json';
+import dmLimits2 from '../../assets/topics/demo/dmLimits2.json';
+import dmExam1 from '../../assets/topics/demo/dmExam1.json';
+
 import {
   JSONTopic,
   JSONTopicContent,
@@ -16,9 +19,15 @@ import {
 import { ParagraphSection } from '../../model/topic/section/ParagraphSection';
 import { FormulaSection } from '../../model/topic/section/FormulaSection';
 import { AnswerOption } from '../../model/answer/AnswerOption';
+import { PlotSection } from '../../model/topic/section/PlotSection';
+import { InformationContent } from '../../model/topic/content/InformationContent';
+import { TextBoxSection } from '../../model/topic/section/TextBoxSection';
+import { ImageSection } from '../../model/topic/section/ImageSection';
 
 const topicJSONs: { [key: string]: JSONTopic } = {
   dmLimits1: dmLimits1,
+  dmLimits2: dmLimits2,
+  dmExam1: dmExam1,
 };
 
 export class JSONTopicLoader implements TopicLoader {
@@ -35,14 +44,21 @@ export class JSONTopicLoader implements TopicLoader {
         TopicContentTypes[content.type as keyof typeof TopicContentTypes];
 
       switch (contentType) {
+        case TopicContentTypes.Information:
+          topicContents.push(
+            new InformationContent({
+              id: content.id,
+              sections: this._loadContentSections(content),
+            })
+          );
+          break;
         case TopicContentTypes.MultipleOption:
           topicContents.push(
-            new MultipleOptionContent(
-              content.id,
-              contentType,
-              this._loadContentSections(content),
-              this._loadContentOptions(content.options ?? [])
-            )
+            new MultipleOptionContent({
+              id: content.id,
+              sections: this._loadContentSections(content),
+              options: this._loadContentOptions(content.options ?? []),
+            })
           );
           break;
         default:
@@ -65,12 +81,20 @@ export class JSONTopicLoader implements TopicLoader {
       const sectionType: TopicSectionTypes =
         TopicSectionTypes[section.type as keyof typeof TopicSectionTypes];
       switch (sectionType) {
+        case TopicSectionTypes.TextBox:
+          sections.push(new TextBoxSection(section.text ?? ''));
+          break;
         case TopicSectionTypes.Formula:
-          sections.push(new FormulaSection(sectionType, section.formula ?? ''));
+          sections.push(new FormulaSection(section.formula ?? ''));
+          break;
+        case TopicSectionTypes.Plot:
+          sections.push(new PlotSection(section.formulas ?? []));
+          break;
+        case TopicSectionTypes.Image:
+          sections.push(new ImageSection(section.fileName ?? ''));
           break;
         case TopicSectionTypes.Paragraph:
-        default:
-          sections.push(new ParagraphSection(sectionType, section.text ?? ''));
+          sections.push(new ParagraphSection(section.text ?? ''));
           break;
       }
     });

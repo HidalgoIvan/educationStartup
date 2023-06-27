@@ -12,6 +12,8 @@ export type JSONTopicContent = {
     type: string;
     text?: string;
     formula?: string;
+    formulas?: string[];
+    fileName?: string;
   }[];
   options?: JSONTopicOption[];
 };
