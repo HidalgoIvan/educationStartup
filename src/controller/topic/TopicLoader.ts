@@ -1,5 +1,5 @@
 import { Topic } from '../../model/topic/Topic';
 
 export interface TopicLoader {
-  loadTopic(topicId: string): Topic;
+  loadTopic(topicId: string): Promise<Topic>;
 }

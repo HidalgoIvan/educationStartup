@@ -1,14 +1,50 @@
 [
-	{
+  {
     "title": "La derivada I",
     "id": "dmDerivatives1",
-    "description": "Derivadas de funciones polinómicas, algebraicas, trascendentes y derivadas de orden superior.",
+    "description": "Derivada por definición de funciones polinómicas (regla de los 4 pasos).",
     "icon": "parabole"
   },
-	{
+  {
     "title": "La derivada II",
     "id": "dmDerivatives2",
-    "description": "Máximos, mínimos y puntos de inflexión de una función, optimización, velocidad, aceleración y rapidez de un móvil, regla de L'Hôpital.",
+    "description": "Derivadas de funciones algebraicas.",
+    "icon": "parabole"
+  },
+  {
+    "title": "La derivada III",
+    "id": "dmDerivatives3",
+    "description": "Derivadas de funciones trascendentes.",
+    "icon": "parabole"
+  },
+  {
+    "title": "La derivada IV",
+    "id": "dmDerivatives4",
+    "description": "Derivadas de orden superior.",
+    "icon": "parabole"
+  },
+  {
+    "title": "Aplicaciones de la derivada I",
+    "id": "dmDerivatives5",
+    "description": "Máximos, mínimos y puntos de inflexión de una función.",
+    "icon": "minimum"
+  },
+  {
+    "title": "Aplicaciones de la derivada II",
+    "id": "dmDerivatives6",
+    "description": "Optimización.",
+    "icon": "minimum"
+  },
+  {
+    "title": "Aplicaciones de la derivada III",
+    "id": "dmDerivatives7",
+    "description": "Velocidad, aceleración y rapidez de un móvil.",
+    "icon": "minimum"
+  },
+  {
+    "title": "Aplicaciones de la derivada IV",
+    "id": "dmDerivatives8",
+    "description": "Regla del L'Hôpital.",
     "icon": "minimum"
   },
   {
@@ -17,7 +53,7 @@
     "description": "Antecedentes y aplicaciones del cálculo.",
     "icon": "graphLimit"
   },
-	{
+  {
     "title": "Límites II",
     "id": "dmLimits2",
     "description": "Concepto, propiedades y límites de funciones algebraicas y trascendentes",

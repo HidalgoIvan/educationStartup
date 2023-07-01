@@ -89,21 +89,25 @@ const CardControls = styled.div`
 `;
 
 const TopicProgress = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 9vw;
+  height: 9vw;
+  min-width: 70px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--highlight);
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 15px;
   border-radius: 200px;
 `;
 
 const OpenTopicButton = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 9vw;
+  height: 9vw;
+  min-width: 70px;
+  min-height: 70px;
   background-color: var(--main-200);
   font-size: 1.5em;
   display: flex;

@@ -15,7 +15,7 @@ export class LSTopicStatsLoader implements TopicStatsLoader {
   }
 
   loadTopicStats = async (topicId: string): Promise<TopicStats> => {
-    const topic = this.topicLoader.loadTopic(topicId);
+    const topic = await this.topicLoader.loadTopic(topicId);
     const topicType: TopicTypes = topic.type;
     let stats: TopicStats = getEmptyTopicStats();
     switch (topicType) {

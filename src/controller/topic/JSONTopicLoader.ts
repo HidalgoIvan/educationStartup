@@ -1,12 +1,5 @@
 import { Topic, TopicTypes } from '../../model/topic/Topic';
 import { TopicLoader } from './TopicLoader';
-import dmLimits1 from '../../assets/topics/demo/dmLimits1.json';
-import dmLimits2 from '../../assets/topics/demo/dmLimits2.json';
-import dmDerivatives1 from '../../assets/topics/demo/dmDerivatives1.json';
-import dmDerivatives2 from '../../assets/topics/demo/dmDerivatives2.json';
-
-import dmExam1 from '../../assets/topics/demo/dmExam1.json';
-
 import {
   JSONTopic,
   JSONTopicContent,
@@ -27,18 +20,28 @@ import { InformationContent } from '../../model/topic/content/InformationContent
 import { TextBoxSection } from '../../model/topic/section/TextBoxSection';
 import { ImageSection } from '../../model/topic/section/ImageSection';
 
-const topicJSONs: { [key: string]: JSONTopic } = {
-  dmLimits1: dmLimits1,
-  dmLimits2: dmLimits2,
-  dmExam1: dmExam1,
-  dmDerivatives1: dmDerivatives1,
-  dmDerivatives2: dmDerivatives2,
+type JSONTopicDictionary = {
+  [key: string]: JSONTopic;
 };
 
 export class JSONTopicLoader implements TopicLoader {
-  loadTopic(topicId: string): Topic {
+  async loadTopicDictionary(): Promise<JSONTopicDictionary> {
+    const dataFolder = import.meta.glob('../../assets/topics/demo/*.json');
+    const result: JSONTopicDictionary = {};
+    for (const module of Object.values(dataFolder)) {
+      const JSONTopic: JSONTopic = (await module()) as JSONTopic;
+      result[JSONTopic.id] = JSONTopic;
+    }
+    return result;
+  }
+
+  async loadTopic(topicId: string): Promise<Topic> {
+    const topicJSONs: JSONTopicDictionary = await this.loadTopicDictionary();
+
     if (!topicJSONs[topicId]) {
-      return new Topic(topicId, TopicTypes.NotFound, '', []);
+      return new Promise((resolve) => {
+        resolve(new Topic(topicId, TopicTypes.NotFound, '', []));
+      });
     }
 
     const json: JSONTopic = topicJSONs[topicId];

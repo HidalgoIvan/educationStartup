@@ -15,6 +15,7 @@ const Formula: FunctionComponent<FormulaProps> = ({ formula }) => {
       mathquillDidMount={(mathField) => {
         mathField.latex(formula);
         if (!ready) {
+          setTimeout(() => mathField.latex(formula), 50);
           setReady(true);
         }
       }}
