@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives1",
   "type": "RandomPool",
-  "title": "La derivada I",
+  "title": "Funciones polinómicas",
+	"description": "Derivada por definición de funciones polinómicas (regla de los 4 pasos).",
   "content": [
     {
       "id": "1",

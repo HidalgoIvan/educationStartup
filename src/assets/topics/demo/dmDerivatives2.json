@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives2",
   "type": "RandomPool",
-  "title": "La derivada I",
+  "title": "Funciones algebraicas",
+	"description": "Derivadas de funciones algebraicas.",
   "content": [
     {
       "id": "6",

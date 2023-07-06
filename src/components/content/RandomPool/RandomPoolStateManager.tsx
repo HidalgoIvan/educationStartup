@@ -55,7 +55,12 @@ const RandomPoolStateManager: FunctionComponent<
   }
 
   if (stateController.statsController.stats.progressPercentage >= 1) {
-    return <CourseCompleteCard title={topic.title} />;
+    return (
+      <CourseCompleteCard
+        title={topic.title}
+        stats={stateController.statsController.stats}
+      />
+    );
   }
 
   return (

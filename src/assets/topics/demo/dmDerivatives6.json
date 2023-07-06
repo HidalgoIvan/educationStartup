@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives6",
   "type": "RandomPool",
-  "title": "Aplicaciones de la derivada II",
+  "title": "Optimización",
+	"description": "Optimización mediante el uso de derivadas.",
   "content": [
     {
       "id": "6",

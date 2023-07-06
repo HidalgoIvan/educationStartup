@@ -13,7 +13,7 @@ const PlotGraph: FunctionComponent<PlotGraphProps> = ({ formulas }) => {
 
     functionPlot({
       target: element,
-      width: element.scrollWidth,
+      width: element.clientWidth - 20,
       height: 300,
       yAxis: { domain: [-2, 10] },
       xAxis: { domain: [-10, 10] },
@@ -35,5 +35,6 @@ const PlotGraph: FunctionComponent<PlotGraphProps> = ({ formulas }) => {
 const GraphContainer = styled.div`
   width: calc(100% - 20px);
   margin: 0 auto;
+  text-align: center;
 `;
 export default PlotGraph;

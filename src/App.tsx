@@ -18,11 +18,13 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import { Route } from 'react-router';
-import { HashRouter, Switch, Redirect } from 'react-router-dom';
 
-import TopicList from './pages/TopicListPage/TopicListPage';
+import { Route } from 'react-router';
+import { HashRouter, Switch } from 'react-router-dom';
+
+//import TopicList from './pages/TopicListPage/TopicListPage';
 import TopicPage from './pages/TopicPage/TopicPage';
+import CourseList from './components/CourseList/CourseList';
 
 setupIonicReact();
 
@@ -32,11 +34,14 @@ const App: React.FC = () => (
       <Route path="/topic/:topicId">
         <TopicPage />
       </Route>
+      <Route exact path="/courses">
+        <CourseList />
+      </Route>
       <Route exact path="/">
-        <TopicList />
+        <CourseList />
       </Route>
       <Route path="*">
-        <TopicList />
+        <CourseList />
       </Route>
     </Switch>
   </HashRouter>

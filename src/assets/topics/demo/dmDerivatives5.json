@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives5",
   "type": "RandomPool",
-  "title": "Aplicaciones de la derivada I",
+  "title": "Máximos, mínimos y puntos de inflexión",
+	"description": "Máximos, mínimos y puntos de inflexión de una función.",
   "content": [
     {
       "id": "1",

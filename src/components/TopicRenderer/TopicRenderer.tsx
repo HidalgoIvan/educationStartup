@@ -3,6 +3,7 @@ import { Topic, TopicTypes } from '../../model/topic/Topic';
 import NotFound from '../NotFound/NotFound';
 import RandomPoolStateManager from '../content/RandomPool/RandomPoolStateManager';
 import TutorialStateManager from '../content/Tutorial/TutorialStateManager';
+import ExamStateManager from '../content/Exam/ExamStateManager';
 
 interface TopicRendererProps {
   topic: Topic;
@@ -16,6 +17,9 @@ const TopicRenderer: FunctionComponent<TopicRendererProps> = ({ topic }) => {
       break;
     case TopicTypes.Tutorial:
       content = <TutorialStateManager topic={topic} />;
+      break;
+    case TopicTypes.Exam:
+      content = <ExamStateManager topic={topic} />;
       break;
     default:
       content = <NotFound />;

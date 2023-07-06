@@ -1,10 +1,11 @@
 {
   "id": "dmLimits1",
   "type": "RandomPool",
-  "title": "Límites I",
+  "title": "Antecedentes y aplicaciones",
+  "description": "Antecedentes y aplicaciones del cálculo.",
   "content": [
     {
-			"id": "1",
+      "id": "1",
       "type": "MultipleOption",
       "sections": [
         {
@@ -41,7 +42,7 @@
       ]
     },
     {
-			"id": "2",
+      "id": "2",
       "type": "MultipleOption",
       "sections": [
         {
@@ -50,7 +51,7 @@
         },
         {
           "type": "Formula",
-          "formula": "f(x) = x^2 -7x + 1 "
+          "formula": "f(x) = x^2 - 7x + 1 "
         },
         {
           "type": "Paragraph",
@@ -77,8 +78,8 @@
         }
       ]
     },
-		{
-			"id": "3",
+    {
+      "id": "3",
       "type": "MultipleOption",
       "sections": [
         {
@@ -101,25 +102,25 @@
       "options": [
         {
           "value": "a^2 + h^2 - a*b + 2",
-					"formula": "a^2 + h^2 - a*b + 2"
+          "formula": "a^2 + h^2 - a*b + 2"
         },
         {
           "value": "a^2 + h^2 + a*b + 2",
-					"formula": "a^2 + h^2 + a*b + 2",
+          "formula": "a^2 + h^2 + a*b + 2",
           "correct": true
         },
         {
           "value": "a + h^2 - a*b + 2",
-					"formula": "a + h^2 - a*b + 2"
+          "formula": "a + h^2 - a*b + 2"
         },
         {
           "value": "a^2 + h + a*b + 2",
-					"formula": "a^2 + h + a*b + 2"
+          "formula": "a^2 + h + a*b + 2"
         }
       ]
     },
-		{
-			"id": "4",
+    {
+      "id": "4",
       "type": "MultipleOption",
       "sections": [
         {
@@ -142,25 +143,25 @@
       "options": [
         {
           "value": "f(0) = 2,\\ f(5) = 22",
-					"formula": "f(0) = 2,\\ f(5) = 22",
-					"correct": true
+          "formula": "f(0) = 2,\\ f(5) = 22",
+          "correct": true
         },
         {
           "value": "f(0) = 2,\\ f(5) = 12",
-					"formula": "f(0) = 2,\\ f(5) = 12"
+          "formula": "f(0) = 2,\\ f(5) = 12"
         },
         {
           "value": "f(0) = -3,\\ f(5) = 22",
-					"formula": "f(0) = -3,\\ f(5) = 22"
+          "formula": "f(0) = -3,\\ f(5) = 22"
         },
         {
           "value": "f(0) = -3,\\ f(5) = 12",
-					"formula": "f(0) = -3,\\ f(5) = 12"
+          "formula": "f(0) = -3,\\ f(5) = 12"
         }
       ]
     },
-		{
-			"id": "5",
+    {
+      "id": "5",
       "type": "MultipleOption",
       "sections": [
         {
@@ -183,25 +184,25 @@
       "options": [
         {
           "value": "10x + 10, \\ 5x + 10",
-					"formula": "10x + 10, \\ 5x + 10"
+          "formula": "10x + 10, \\ 5x + 10"
         },
         {
           "value": "11x + 4, \\ 5x + 10",
-					"formula": "11x + 4, \\ 5x + 10"
+          "formula": "11x + 4, \\ 5x + 10"
         },
         {
           "value": "11x + 6, \\ 5x - 4",
-					"formula": "11x + 6, \\ 5x - 4"
+          "formula": "11x + 6, \\ 5x - 4"
         },
         {
           "value": "11x + 10, \\ 5x - 4",
-					"formula": "11x + 10, \\ 5x - 4",
-					"correct" : true
+          "formula": "11x + 10, \\ 5x - 4",
+          "correct": true
         }
       ]
     },
-		{
-			"id": "6",
+    {
+      "id": "6",
       "type": "MultipleOption",
       "sections": [
         {
@@ -224,25 +225,25 @@
       "options": [
         {
           "value": "f(x)*g(x) = x^2 + 5x + 5",
-					"formula": "f(x)*g(x) = x^2 + 5x + 5"
+          "formula": "f(x)*g(x) = x^2 + 5x + 5"
         },
         {
           "value": "f(x)*g(x) = x^2 + 6x + 5",
-					"formula": "f(x)*g(x) = x^2 + 6x + 5",
-					"correct" : true
+          "formula": "f(x)*g(x) = x^2 + 6x + 5",
+          "correct": true
         },
         {
           "value": "f(x)*g(x) = x^2 + 4x + 6",
-					"formula": "f(x)*g(x) = x^2 + 4x + 6"
+          "formula": "f(x)*g(x) = x^2 + 4x + 6"
         },
         {
           "value": "f(x)*g(x) = x^2 + 5x + 6",
-					"formula": "f(x)*g(x) = x^2 + 5x + 6"
+          "formula": "f(x)*g(x) = x^2 + 5x + 6"
         }
       ]
     },
-		{
-			"id": "7",
+    {
+      "id": "7",
       "type": "MultipleOption",
       "sections": [
         {
@@ -257,25 +258,25 @@
       "options": [
         {
           "value": "x \\gt 1",
-					"formula": "x \\gt 1"
+          "formula": "x \\gt 1"
         },
         {
           "value": "x \\gt 2",
-					"formula": "x \\gt 2"
+          "formula": "x \\gt 2"
         },
         {
-					"value": "x \\gt 3",
-					"formula": "x \\gt 3",
-					"correct" : true
+          "value": "x \\gt 3",
+          "formula": "x \\gt 3",
+          "correct": true
         },
         {
           "value": "x \\gt -1",
-					"formula": "x \\gt -1"
+          "formula": "x \\gt -1"
         }
       ]
     },
-		{
-			"id": "8",
+    {
+      "id": "8",
       "type": "MultipleOption",
       "sections": [
         {
@@ -286,7 +287,7 @@
           "type": "Formula",
           "formula": "f(x) = sen(x)"
         },
-				{
+        {
           "type": "Paragraph",
           "text": "Evaluada en:"
         },
@@ -301,18 +302,18 @@
         },
         {
           "value": "1",
-					"correct": true
+          "correct": true
         },
         {
-					"value": "0.5"
+          "value": "0.5"
         },
         {
           "value": "0.86"
         }
       ]
     },
-		{
-			"id": "9",
+    {
+      "id": "9",
       "type": "MultipleOption",
       "sections": [
         {
@@ -323,7 +324,7 @@
           "type": "Formula",
           "formula": "f(x) = -5x + 10"
         },
-				{
+        {
           "type": "Paragraph",
           "text": "Sea igual a 0"
         }
@@ -331,13 +332,13 @@
       "options": [
         {
           "value": "2",
-					"correct": true
+          "correct": true
         },
         {
           "value": "1"
         },
         {
-					"value": "5"
+          "value": "5"
         },
         {
           "value": "0"

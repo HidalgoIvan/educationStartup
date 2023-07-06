@@ -2,6 +2,7 @@ export type JSONTopic = {
   id: string;
   type: string;
   title: string;
+  description: string;
   content: JSONTopicContent[];
 };
 

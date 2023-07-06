@@ -1,0 +1,41 @@
+[
+  {
+    "id": "dmDerivativesCourse1",
+    "title": "La derivada",
+    "icon": "parabole",
+    "topicIds": [
+      "dmDerivatives1",
+      "dmDerivatives2",
+      "dmDerivatives3",
+      "dmDerivatives4"
+    ]
+  },
+	{
+    "id": "dmDerivativesCourse2",
+    "title": "Aplicaciones de la derivada",
+    "icon": "minimum",
+    "topicIds": [
+      "dmDerivatives5",
+      "dmDerivatives6",
+      "dmDerivatives7",
+      "dmDerivatives8"
+    ]
+  },
+	{
+    "id": "dmLimitsCourse1",
+    "title": "Límites",
+    "icon": "graphLimit",
+    "topicIds": [
+      "dmLimits1",
+      "dmLimits2"
+    ]
+  },
+	{
+    "id": "dmFinalExam2",
+    "title": "Examen final",
+    "icon": "trophy",
+    "topicIds": [
+      "dmExam2"
+    ]
+  }
+]

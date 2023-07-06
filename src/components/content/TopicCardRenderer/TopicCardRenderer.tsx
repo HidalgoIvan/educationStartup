@@ -77,7 +77,9 @@ const CardHeader = styled.div`
 
 const CardTitle = styled.div`
   font-size: 1.5em;
+  text-align: center;
   color: var(--main-300);
+  margin: 12px 0;
 `;
 
 export default TopicCardRenderer;

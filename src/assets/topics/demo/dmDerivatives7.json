@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives7",
   "type": "RandomPool",
-  "title": "Aplicaciones de la derivada III",
+  "title": "Velocidad, aceleración y rapidez",
+	"description": "Velocidad, aceleración y rapidez de un móvil.",
   "content": [
     {
       "id": "11",

@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives4",
   "type": "RandomPool",
-  "title": "La derivada I",
+  "title": "De orden superior",
+	"description": "Derivadas de orden superior.",
   "content": [
     {
       "id": "16",

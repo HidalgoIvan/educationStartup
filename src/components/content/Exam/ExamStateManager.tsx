@@ -6,23 +6,23 @@ import CourseCompleteCard from '../../CourseCompleteCard/CourseCompleteCard';
 import { MultipleOptionContent } from '../../../model/topic/content/MultipleOptionContent';
 import { TopicContent } from '../../../model/topic/content/TopicContent';
 import TopicCardRenderer from '../TopicCardRenderer/TopicCardRenderer';
-import { TutorialStateController } from '../../../controller/topicStateController/TutorialStateController';
+import { ExamStateController } from '../../../controller/topicStateController/ExamStateController';
 
-interface TutorialProps {
+interface ExamProps {
   topic: Topic;
 }
 
-const TutorialStateManager: FunctionComponent<TutorialProps> = ({ topic }) => {
-  const [stateController, setStateController] =
-    useState<TutorialStateController>();
+const ExamStateManager: FunctionComponent<ExamProps> = ({ topic }) => {
+  const [stateController, setStateController] = useState<ExamStateController>();
   const [content, setContent] = useState<TopicContent>();
   const [progressPercentage, setProgressPercentage] = useState<number>(0);
+  const [selectedCorrect, setSelectedCorrect] = useState(false);
 
   useEffect(() => {
     new LSTopicStatsLoader()
       .loadTopicStats(topic.id)
       .then((stats: TopicStats) => {
-        const controller = new TutorialStateController({
+        const controller = new ExamStateController({
           topic: topic,
           stats: stats,
           onStatsChanged: (stats) => {
@@ -38,13 +38,21 @@ const TutorialStateManager: FunctionComponent<TutorialProps> = ({ topic }) => {
       });
   }, [topic]);
 
-  const onCorrectAnswer = (content: TopicContent) => null;
+  const onCorrectAnswer = (content: TopicContent) => {
+    setSelectedCorrect(true);
+  };
 
-  const onWrongAnswer = (content: TopicContent) => null;
+  const onWrongAnswer = (content: TopicContent) => {
+    setSelectedCorrect(false);
+  };
 
   const handleContinue = (content: TopicContent) => {
     stateController?.addCompletedContent(content);
+    if (selectedCorrect) {
+      stateController?.onCorrectAnswer(content);
+    }
     setContent(stateController?.getNextContent());
+    setSelectedCorrect(false);
   };
 
   if (!stateController) {
@@ -72,4 +80,4 @@ const TutorialStateManager: FunctionComponent<TutorialProps> = ({ topic }) => {
   );
 };
 
-export default TutorialStateManager;
+export default ExamStateManager;

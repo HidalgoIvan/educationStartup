@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives3",
   "type": "RandomPool",
-  "title": "La derivada I",
+  "title": "Funciones trascendentes",
+	"description": "Derivadas de funciones trascendentes.",
   "content": [
     {
       "id": "11",

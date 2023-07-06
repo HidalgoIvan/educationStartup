@@ -3,17 +3,32 @@ import { TopicContentCard } from '../TopicContentCard/TopicContentCard';
 import Paragraph from '../contentElements/Paragraph/Paragraph';
 import ContentBox from '../contentElements/ContentBox/ContentBox';
 import { styled } from 'styled-components';
-import { IonItem } from '@ionic/react';
 import ProgressBar from '../Progressbar/Progressbar';
 import { Link } from 'react-router-dom';
+import { TopicStats } from '../../model/topic/stats/TopicStats';
+import { ExamStats } from '../../model/topic/stats/ExamStats';
 
 interface CourseCompleteCardProps {
   title: string;
+  stats: TopicStats;
 }
 
 const CourseCompleteCard: FunctionComponent<CourseCompleteCardProps> = ({
   title,
+  stats,
 }) => {
+  let score = <></>;
+  console.log(stats, typeof stats);
+  if ('correctExercises' in stats) {
+    score = (
+      <Paragraph>
+        {` Calificación: ${stats.correctExercises}/${
+          (stats as ExamStats).totalExercises
+        }`}
+      </Paragraph>
+    );
+  }
+
   return (
     <TopicContentCard>
       <ContentWrapper>
@@ -21,6 +36,7 @@ const CourseCompleteCard: FunctionComponent<CourseCompleteCardProps> = ({
         <Paragraph>¡Felicidades!</Paragraph>
         <ContentBox>{title}</ContentBox>
         <Paragraph>Has completado este curso</Paragraph>
+        {score}
         <Link to={'/'}>
           <ReturnButton>Regresar</ReturnButton>
         </Link>

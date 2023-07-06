@@ -1,7 +1,8 @@
 {
   "id": "dmDerivatives8",
   "type": "RandomPool",
-  "title": "Aplicaciones de la derivada IV",
+  "title": "Regla del L'Hôpital",
+	"description": "Regla del L'Hôpital.",
   "content": [
 		{
       "id": "16",

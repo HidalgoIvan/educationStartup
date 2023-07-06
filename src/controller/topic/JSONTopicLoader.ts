@@ -40,7 +40,7 @@ export class JSONTopicLoader implements TopicLoader {
 
     if (!topicJSONs[topicId]) {
       return new Promise((resolve) => {
-        resolve(new Topic(topicId, TopicTypes.NotFound, '', []));
+        resolve(this._getEmptyTopic());
       });
     }
 
@@ -74,12 +74,13 @@ export class JSONTopicLoader implements TopicLoader {
       }
     });
 
-    return new Topic(
-      topicId,
-      TopicTypes[json.type as keyof typeof TopicTypes],
-      json.title,
-      topicContents
-    );
+    return new Topic({
+      id: topicId,
+      type: TopicTypes[json.type as keyof typeof TopicTypes],
+      title: json.title,
+      description: json.description,
+      contents: topicContents,
+    });
   }
 
   private _loadContentSections(content: JSONTopicContent): TopicSection[] {
@@ -122,5 +123,15 @@ export class JSONTopicLoader implements TopicLoader {
       );
     });
     return options;
+  }
+
+  private _getEmptyTopic(): Topic {
+    return new Topic({
+      id: '',
+      type: TopicTypes.NotFound,
+      title: '',
+      description: '',
+      contents: [],
+    });
   }
 }

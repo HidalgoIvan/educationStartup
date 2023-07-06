@@ -1,7 +1,8 @@
 {
   "id": "dmLimits2",
   "type": "RandomPool",
-  "title": "Límites II",
+  "title": "Funciones algebraicas y trascendentes",
+	"description": "Concepto, propiedades y límites de funciones algebraicas y trascendentes",
   "content": [
     {
       "id": "1",
